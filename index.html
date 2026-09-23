@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400&text=%E5%90%B4%E9%9D%99%E9%9B%AF&display=swap" rel="stylesheet">
 <style>
 :root {
   --paper: #EDF0F3;
@@ -217,8 +216,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 /* version B: verbs + research map */
 .hero .wrap { grid-template-columns: 1fr; min-height: auto; padding-top: 4.5rem; padding-bottom: 4.5rem; }
-.hero-text { max-width: 42rem; }
-.claim { max-width: 24ch; }
+.hero-text { max-width: 39rem; }
+.claim { max-width: 22ch; }
 .verb { transition: color .4s, background-size .4s; background-image: linear-gradient(var(--accent), var(--accent)); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 1.15em; }
 .verb.on { color: var(--accent); background-size: 100% 1px; }
 @media (prefers-reduced-motion: reduce) { .verb { transition: none; } }
@@ -229,6 +228,16 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .map-line { display: block; font-size: 1.02rem; font-weight: 560; margin-bottom: 0.4rem; }
 .map-find { display: block; font-size: 0.93rem; color: var(--muted); line-height: 1.5; }
 @media (max-width: 820px) { .map { grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2.5rem; } }
+
+/* refined hero: quieter hierarchy, no decorative background */
+.hero-text { width: min(100%, 39rem); }
+.role { line-height: 1.65; }
+.lede { max-width: 38rem; }
+@media (max-width: 560px) {
+  .name { font-size: clamp(2.65rem, 14vw, 4rem); }
+  .hero .wrap { padding-top: 3.25rem; padding-bottom: 3.5rem; }
+  .claim { margin-top: 1.9rem; }
+}
 </style>
 </head>
 <body>
@@ -249,8 +258,8 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 <header class="hero" id="top">
   <div class="wrap">
     <div class="hero-text">
-      <h1 class="name">Jingwen Wu <span class="zh" lang="zh-Hans">吴静雯</span></h1>
-      <p class="role">Ph.D. Candidate in Government<br>The University of Texas at Austin · 2026–27 Academic Job Market</p>
+      <h1 class="name">Jingwen Wu</h1>
+      <p class="role">Ph.D. Candidate in Government<br>The University of Texas at Austin<br>2026–27 Academic Job Market</p>
       <p class="claim">Who gets connected is a political decision.</p>
       <p class="lede">I study comparative politics and international relations, with a focus on digital politics, authoritarian governance, and East Asia.</p>
       <div class="actions">
